@@ -1,7 +1,7 @@
 {
   "name": "node-agent-sdk-transformer",
   "description": "Liveperson Agent Messaging SDK for NodeJS",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": {
     "name": "LivePersonInc",
     "email": "fe-infra-lp@liveperson.com"
@@ -10,7 +10,7 @@
     {
       "name": "Michael Dimenshtein",
       "email": "michaeld@liveperson.com"
-    }, 
+    },
     {
       "name": "Christian Garrido",
       "email": "cgarrido@liveperson.com"
