@@ -1,5 +1,5 @@
 {
-  "name": "node-agent-sdk",
+  "name": "node-agent-sdk-transformer",
   "description": "Liveperson Agent Messaging SDK for NodeJS",
   "version": "1.0.4",
   "author": {
@@ -10,6 +10,10 @@
     {
       "name": "Michael Dimenshtein",
       "email": "michaeld@liveperson.com"
+    }, 
+    {
+      "name": "Christian Garrido",
+      "email": "cgarrido@liveperson.com"
     }
   ],
   "scripts": {
@@ -27,7 +31,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LivePersonInc/node-agent-sdk.git"
+    "url": "https://github.com/ChristianJGarrido/node-agent-sdk.git"
   },
   "keywords": [
     "agent",

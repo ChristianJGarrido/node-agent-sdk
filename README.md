@@ -1,6 +1,6 @@
 
 
-# node-agent-sdk
+# node-agent-sdk-transformer
 
 [![build](https://travis-ci.org/LivePersonInc/node-agent-sdk.svg?branch=master)](https://travis-ci.org/LivePersonInc/node-agent-sdk)
 [![npm version](https://img.shields.io/npm/v/node-agent-sdk.svg)](https://img.shields.io/npm/v/node-agent-sdk)
@@ -60,7 +60,7 @@ To have the Messaging feature added to your account speak with your LivePerson A
 
 #### Create `index.js`
 ```javascript
-const Agent = require('node-agent-sdk').Agent;
+const Agent = require('node-agent-sdk-transformer').Agent;
 
 const agent = new Agent({
     accountId: process.env.LP_ACCOUNT,
@@ -113,6 +113,28 @@ new Agent({
     requestTimeout: Number, // default to 10000 milliseconds
     errorCheckInterval: Number, // defaults to 1000 milliseconds
     apiVersion: Number // Messaging API version - defaults to 2 (version 1 is not supported anymore)
+    transformer: Object // defaults to require('node-agent-sdk-transformer').Transformer object
+});
+```
+#### Transformer
+This object will be used to map the response handlers from the SDK to usable data and events within the node-agent-sdk-transformer module. You can override the default handlers by exported the default handler from the module and adding your own functions.
+
+```javascript
+const Agent = require('node-agent-sdk-transformer').Agent;
+let Transformer = require('node-agent-sdk-transformer').Transformer;
+
+Transformer['.ams.routing.SetAgentState'] = (msg, agent) => {
+  msg.body.channels = ['MESSAGING'];
+  msg.body.agentUserId = agent.__oldAgentId;
+  //add additonal code, etc.
+  return msg;
+});
+
+const agent = new Agent({
+    accountId: process.env.LP_ACCOUNT,
+    username: process.env.LP_USER,
+    password: process.env.LP_PASS
+    transformer: Transformer
 });
 ```
 #### Authentication
