@@ -2,11 +2,6 @@
 
 # node-agent-sdk-transformer
 
-[![build](https://travis-ci.org/LivePersonInc/node-agent-sdk.svg?branch=master)](https://travis-ci.org/LivePersonInc/node-agent-sdk)
-[![npm version](https://img.shields.io/npm/v/node-agent-sdk.svg)](https://img.shields.io/npm/v/node-agent-sdk)
-[![npm downloads](https://img.shields.io/npm/dm/node-agent-sdk.svg)](https://img.shields.io/npm/dm/node-agent-sdk.svg)
-[![license](https://img.shields.io/npm/l/node-agent-sdk.svg)](LICENSE)
-
 > LivePerson Agent Messaging SDK for NodeJS
 
 The SDK provides a simple node JS wrapper for the [LivePerson messaging API][1].
@@ -45,13 +40,13 @@ To have the Messaging feature added to your account speak with your LivePerson A
 - **Option 1 - npm install (does not include sample apps)**
 
    ```sh
-   npm i node-agent-sdk --save
+   npm i node-agent-sdk-transformer --save
    ```
 
 - **Option 2 - Clone this repository (includes sample apps)**
 
     ```sh
-    git clone https://github.com/LivePersonInc/node-agent-sdk.git
+    git clone https://github.com/ChristianJGarrido/node-agent-sdk.git
     ```
     Run the [greeting bot](/examples/greeting-bot/greeting-bot.js) example (see how in [Running The Sample Apps][3]).
 
