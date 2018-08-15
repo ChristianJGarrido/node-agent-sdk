@@ -112,7 +112,7 @@ new Agent({
 });
 ```
 #### Transformer
-This object will be used to map the response handlers from the SDK to usable data and events within the node-agent-sdk-transformer module. You can override the default handlers by exported the default handler from the module and adding your own functions.
+This object will be used to map the response handlers from the SDK to usable data and events within the node-agent-sdk-transformer module. You can override the default handlers by exporting the default handler from the module and adding your own functions.
 
 ```javascript
 const Agent = require('node-agent-sdk-transformer').Agent;
